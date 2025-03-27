@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Roboto, Open_Sans } from 'next/font/google'
 import './globals.css'
+import { AuthProvider } from '@/lib/supabase/auth-context'
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -26,7 +27,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${roboto.variable} ${openSans.variable} font-sans antialiased`}>
-        {children}
+        <AuthProvider>{children}</AuthProvider>
       </body>
     </html>
   )
