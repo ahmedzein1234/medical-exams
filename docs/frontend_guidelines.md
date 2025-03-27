@@ -1,0 +1,1 @@
+[Content of frontend_guidelines_document.md]
